@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+	<meta charset="utf-8" />
+	<title>Grant Terdoslavich Audio Vizualizer</title>
+	<link rel="stylesheet" type="text/css" href="stlye.css">
+   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>-->
+    <script src="media/loader.js" type="module"></script>
+	
+  
+</head>
+<body>
+    <p>Grant Terdoslavich Audio Vizualizer</p>
+	<canvas width="840" height="600"></canvas>
+	<div id="controls">
+		<audio></audio>
+		<section>
+		<label>Track: 
+			<select id="trackSelect">
+				<option value="media/sturgill/01 Ronin.mp3">Ronin</option>
+				<option value="media/sturgill/02 Remember to Breathe.mp3">Remember to Breathe</option>
+				<option value="media/sturgill/03 Sing Along.mp3" selected>Sing Along</option>
+			</select>
+		</label>
+		<button id="playButton" data-playing="no"></button>
+		<button id="fsButton">Full Screen</button>
+		</section>
+		<section>
+			Volume: <input type="range" id="volumeSlider" min="0" max="2" value="1" step="0.01">
+			<span id="volumeLabel">???</span>
+			</section>
+       
+       <section>
+           Red Value of Circles: <input type="range" id="rValueCirc" min="0" max="255" value="15">
+           <span id="rValueCircLabel"></span>
+        </section>
+         <section>
+           Blue Value of Circles: <input type="range" id="bValueCirc" min="0" max="255" value="15">
+           <span id="bValueCircLabel"></span>
+        </section>
+         <section>
+           Green Value of Circles: <input type="range" id="gValueCirc" min="0" max="255" value="15">
+           <span id="gValueCircLabel"></span>
+        </section>
+        <section>
+            Circle Thickness: <input type="range" id="thicknessSlider" min="0" max="2" value="1" step="0.01">
+            <span id="thicknessLabel">???</span>
+        </section>
+	</div>
+    
+     <div>
+        <span>
+            <label for="rTCheckBox">Red Tint Checkbox</label>
+            <input type="checkbox" id="redTCheckBox">
+            
+            <label for="invertCheckBox">Invert Checkbox</label>
+            <input type="checkbox" id="invCheckbox">
+            
+            <label for="noiseCheckBox">Noise Checkbox</label>
+            <input type="checkbox" id="nCheckBox">
+            
+            <label for="sepiaCheckBox">Sepia Checkbox</label>
+            <input type="checkbox" id="sCheckBox">
+            
+            
+         
+        </span>
+    </div>
+     <p>Select how to present audio data:</p>
+    <div>
+        <span>
+           
+            <input type="radio" id="tri" name="drone" value="tri" >
+            <label for="tri">Triangles (Show Wave Form)</label>
+        </span>
+    </div>
+	
+    <div>
+        <span>
+           
+            <input type="radio" id="bars" name="drone" value="bars" >
+            <label for="bars">Bars (Show Frequency)</label>
+        </span>
+    </div>
+    
+    
+    
+     <p>Select which background to use:</p>
+    <div>
+        <span>
+           
+            <input type="radio" id="first" name="drone" value="first" >
+            <label for="first">Background 1</label>
+        </span>
+    </div>
+	
+    <div>
+        <span>
+           
+            <input type="radio" id="second" name="drone" value="second" >
+            <label for="second">Background 2</label>
+        </span>
+    </div>
+</body>
+</html>
