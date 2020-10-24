@@ -1,0 +1,38 @@
+
+	body {
+		background: #eeeeee;
+		font-family: 'Raleway', sans serif;
+	}
+
+	canvas {
+		margin-left:10px;
+		margin-top:10px;
+		box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+		background: black;
+	}
+
+	#controls{
+		margin-left:10px;
+		margin-top:10px;
+  }
+  
+  section{
+  	margin-bottom:1em;
+  }
+  
+  #playButton{
+  	font-size: 1.2em;
+  	width: 3.5em;
+  }
+  
+	button[data-playing="yes"]:after{
+		content: "Pause";
+	}
+	
+	button[data-playing="no"]:after{
+		content: "Play";
+	}
+	
+	#fsButton{
+  	font-size: 1.2em;
+  	width: 6e
